@@ -1,9 +1,20 @@
-import React from 'react'
-
+import DashboardStats from "../components/DashboardStats";
+import DashboardChart from "../components/DashboardChart";
 const Dashboard = () => {
   return (
-    <div>Dashboard</div>
-  )
-}
+    <main className="m-6 w-auto">
+      <header className="py-4">
+        <h2 className="mb-2 text-left text-xl font-extrabold text-primary">
+          Dashboard
+        </h2>
+      </header>
 
-export default Dashboard
+      <DashboardStats />
+
+      {/* <DashboardChart /> */}
+
+    </main>
+  );
+};
+
+export default Dashboard;

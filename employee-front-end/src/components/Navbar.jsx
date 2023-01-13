@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SearchTextfield from "./SearchText";
 
 const Navbar = () => {
   return (
-    <div className="navbar bg-slate-600 text-base-100 shadow-lg">
+
+    <div className="navbar bg-slate-600 text-base-100 shadow-lg body-font font-poppins">
+      {/* Sidebar toggle for smaller screen sizes */}
       <div className="flex-none">
         <label htmlFor="my-drawer" className="btn btn-square btn-ghost">
           <svg
@@ -22,10 +25,14 @@ const Navbar = () => {
         </label>
       </div>
       <div className="flex-1">
-        <Link to={"/"} className="btn btn-ghost normal-case text-xl">
-          daisyUI
+        <Link to={"/"} className="btn btn-ghost normal-case text-lg">
+          EmployeeDash
         </Link>
       </div>
+      <div className="flex-1">
+        <SearchTextfield/>
+      </div>
+      {/* Link to profile */}
       <div className="flex-none">
         <Link to={"/profile"}>
           <button className="btn btn-square btn-ghost">

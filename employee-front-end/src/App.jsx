@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Error404 from "./components/Error404";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./pages/Dashboard";
@@ -10,11 +11,11 @@ import Profile from "./pages/Profile";
 
 function App() {
   return (
-    <Router>
+    <Router >
       <Navbar />
-      <div className="drawer drawer-mobile w-screen">
+      <div className="drawer drawer-mobile w-screen body-font font-poppins">
         <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content flex flex-col items-center justify-center w-full">
+        <div className="drawer-content flex flex-col items-start justify-start w-full">
           <Routes>
             <Route path="*" element={<Error404 />} />
             <Route path="/" element={<Dashboard />} />
@@ -27,6 +28,7 @@ function App() {
         </div>
         <Sidebar />
       </div>
+      <Footer/>
     </Router>
   );
 }
